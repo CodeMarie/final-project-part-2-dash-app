@@ -1,0 +1,673 @@
+,county,category,quantity
+0,Edinburgh City,meat & fish,72605718
+1,Edinburgh City,fruits & vegetables,69467446
+2,Edinburgh City,dairy,69150692
+3,Edinburgh City,clothing,66037206
+4,East Lindsey,meat & fish,61023657
+5,Falkirk,meat & fish,59909748
+6,East Lindsey,fruits & vegetables,58489533
+7,East Lindsey,dairy,57995541
+8,Falkirk,fruits & vegetables,57144570
+9,Falkirk,dairy,56940909
+10,East Lindsey,clothing,55032048
+11,Falkirk,clothing,54217944
+12,Edinburgh City,bakery,48568886
+13,Edinburgh City,gaming,48426986
+14,East Cambridgeshire,meat & fish,44892878
+15,Warwickshire,meat & fish,44489448
+16,Greater London,meat & fish,44304198
+17,Orkney,meat & fish,44009804
+18,Kent,meat & fish,43824214
+19,East Cambridgeshire,dairy,42837170
+20,East Cambridgeshire,fruits & vegetables,42701060
+21,North Yorkshire,meat & fish,42679484
+22,Warwickshire,dairy,42376302
+23,Greater London,fruits & vegetables,42333652
+24,Warwickshire,fruits & vegetables,42167920
+25,Greater London,dairy,42090552
+26,Orkney,dairy,42044808
+27,Orkney,fruits & vegetables,41812408
+28,Kent,fruits & vegetables,41762720
+29,Kent,dairy,41659648
+30,East Cambridgeshire,clothing,40756462
+31,East Lindsey,bakery,40719687
+32,East Lindsey,gaming,40609830
+33,North Yorkshire,dairy,40553608
+34,North Yorkshire,fruits & vegetables,40511527
+35,Warwickshire,clothing,40181382
+36,Greater London,clothing,39965860
+37,Falkirk,gaming,39956529
+38,Orkney,clothing,39866224
+39,Falkirk,bakery,39857661
+40,Islington,meat & fish,39764826
+41,Kent,clothing,39650986
+42,West Somerset,meat & fish,39352354
+43,North Yorkshire,clothing,38478190
+44,West Somerset,dairy,37932104
+45,Islington,dairy,37883754
+46,Islington,fruits & vegetables,37741970
+47,West Somerset,fruits & vegetables,37729390
+48,Neath Port Talbot,meat & fish,36189458
+49,Islington,clothing,35967090
+50,West Somerset,clothing,35747748
+51,Wrexham,meat & fish,35512076
+52,Neath Port Talbot,dairy,34461388
+53,Neath Port Talbot,fruits & vegetables,34450348
+54,Wrexham,fruits & vegetables,33741988
+55,Wrexham,dairy,33647430
+56,Neath Port Talbot,clothing,32698482
+57,Wrexham,clothing,32063498
+58,East Cambridgeshire,bakery,29941962
+59,East Cambridgeshire,gaming,29923570
+60,Greater London,bakery,29752080
+61,Warwickshire,gaming,29686958
+62,Greater London,gaming,29574948
+63,Warwickshire,bakery,29524628
+64,Orkney,bakery,29382412
+65,Orkney,gaming,29269236
+66,Kent,bakery,29211228
+67,Kent,gaming,29203082
+68,North Yorkshire,gaming,28374324
+69,North Yorkshire,bakery,28264030
+70,Islington,gaming,26534220
+71,Islington,bakery,26518342
+72,West Somerset,bakery,26390472
+73,West Somerset,gaming,26324892
+74,Edinburgh City,appliances,24248810
+75,Neath Port Talbot,bakery,24200680
+76,Neath Port Talbot,gaming,24066418
+77,Bassetlaw,meat & fish,24065013
+78,Wrexham,bakery,23567556
+79,Wrexham,gaming,23521410
+80,Bassetlaw,dairy,23049727
+81,Bassetlaw,fruits & vegetables,22951284
+82,Flintshire,meat & fish,22521790
+83,South Northamptonshire,meat & fish,22359737
+84,Lincoln,meat & fish,22343155
+85,Richmondshire,meat & fish,22244078
+86,Tyne and Wear,meat & fish,22223073
+87,Epsom and Ewell,meat & fish,22175006
+88,Stoke-on-Trent,meat & fish,22160073
+89,Wyre,meat & fish,22131178
+90,North Ayrshire,meat & fish,22125893
+91,East Sussex,meat & fish,22072977
+92,Castle Point,meat & fish,22065642
+93,Cheshire East,meat & fish,22050657
+94,Forest of Dean,meat & fish,22047833
+95,Sefton,meat & fish,22041236
+96,Fylde,meat & fish,22036446
+97,Swansea,meat & fish,22029373
+98,Staffordshire,meat & fish,22027594
+99,Lambeth,meat & fish,22009116
+100,Newham,meat & fish,21994211
+101,Haringey,meat & fish,21938489
+102,Bassetlaw,clothing,21921658
+103,Ceredigion,meat & fish,21911840
+104,Dorset,meat & fish,21870305
+105,Chiltern,meat & fish,21859572
+106,East Devon,meat & fish,21824197
+107,Mole Valley,meat & fish,21800414
+108,Lichfield,meat & fish,21761432
+109,Peeblesshire,meat & fish,21724515
+110,Flintshire,fruits & vegetables,21439582
+111,Larne,meat & fish,21397687
+112,Lincoln,fruits & vegetables,21338301
+113,Lincoln,dairy,21305858
+114,Flintshire,dairy,21273324
+115,South Northamptonshire,fruits & vegetables,21209273
+116,Stoke-on-Trent,fruits & vegetables,21197854
+117,South Northamptonshire,dairy,21156432
+118,Staffordshire,dairy,21153781
+119,Wyre,dairy,21142144
+120,Wyre,fruits & vegetables,21140387
+121,Tyne and Wear,fruits & vegetables,21139106
+122,Stoke-on-Trent,dairy,21138688
+123,Epsom and Ewell,fruits & vegetables,21128612
+124,Staffordshire,fruits & vegetables,21123860
+125,Richmondshire,dairy,21113178
+126,Cheshire East,dairy,21110715
+127,Epsom and Ewell,dairy,21106473
+128,North Ayrshire,fruits & vegetables,21105712
+129,Cheshire East,fruits & vegetables,21090341
+130,North Ayrshire,dairy,21090114
+131,Tyne and Wear,dairy,21084117
+132,Fylde,fruits & vegetables,21065418
+133,Castle Point,fruits & vegetables,21043866
+134,Lambeth,fruits & vegetables,21027801
+135,Sefton,fruits & vegetables,21016611
+136,East Sussex,dairy,21015268
+137,Richmondshire,fruits & vegetables,21013614
+138,Sefton,dairy,20992873
+139,Newham,dairy,20989794
+140,Swansea,dairy,20987992
+141,Newham,fruits & vegetables,20976787
+142,Fylde,dairy,20971568
+143,Forest of Dean,fruits & vegetables,20966518
+144,Lambeth,dairy,20959019
+145,Swansea,fruits & vegetables,20957475
+146,Castle Point,dairy,20947655
+147,Chiltern,dairy,20913774
+148,Dorset,dairy,20908857
+149,Edinburgh City,computing,20901156
+150,Forest of Dean,dairy,20886326
+151,East Sussex,fruits & vegetables,20885198
+152,Chiltern,fruits & vegetables,20876666
+153,Haringey,dairy,20867807
+154,Dorset,fruits & vegetables,20860676
+155,Haringey,fruits & vegetables,20835752
+156,Ceredigion,fruits & vegetables,20803450
+157,Ceredigion,dairy,20802907
+158,East Devon,dairy,20775601
+159,Peeblesshire,fruits & vegetables,20756189
+160,East Devon,fruits & vegetables,20731525
+161,Mole Valley,fruits & vegetables,20701136
+162,Lichfield,fruits & vegetables,20685525
+163,Lichfield,dairy,20681600
+164,Mole Valley,dairy,20600524
+165,Peeblesshire,dairy,20570693
+166,Larne,fruits & vegetables,20372503
+167,Larne,dairy,20352921
+168,East Lindsey,appliances,20298930
+169,Bridgend,meat & fish,20296645
+170,Flintshire,clothing,20271317
+171,Bracknell Forest,meat & fish,20258042
+172,South Northamptonshire,clothing,20216828
+173,Lincoln,clothing,20211555
+174,Chorley,meat & fish,20164966
+175,North Ayrshire,clothing,20161956
+176,Hampshire,meat & fish,20143662
+177,Rhoose,meat & fish,20136358
+178,Barry,meat & fish,20120727
+179,Epsom and Ewell,clothing,20118710
+180,Nottinghamshire,meat & fish,20111490
+181,Cheshire East,clothing,20074881
+182,Wyre,clothing,20037666
+183,Stoke-on-Trent,clothing,20026544
+184,Tyne and Wear,clothing,20022225
+185,Dumfries and Galloway,meat & fish,20016199
+186,Richmondshire,clothing,20003667
+187,Belfast,meat & fish,20000359
+188,Fylde,clothing,19989916
+189,Staffordshire,clothing,19972528
+190,Sefton,clothing,19971470
+191,Castle Point,clothing,19962535
+192,Swansea,clothing,19954310
+193,Bedford Borough,meat & fish,19951933
+194,Newham,clothing,19942923
+195,Norfolk,meat & fish,19940693
+196,Isle of Wight,meat & fish,19930329
+197,Lambeth,clothing,19920412
+198,Fareham,meat & fish,19916351
+199,Falkirk,appliances,19910007
+200,Oxford,meat & fish,19891875
+201,Haringey,clothing,19884949
+202,Forest of Dean,clothing,19874161
+203,Dorset,clothing,19872730
+204,Chiltern,clothing,19868993
+205,East Sussex,clothing,19868506
+206,Hinckley and Bosworth,meat & fish,19850694
+207,Harrow,meat & fish,19848131
+208,East Devon,clothing,19718848
+209,Lichfield,clothing,19708838
+210,Mole Valley,clothing,19679593
+211,Powys,meat & fish,19668172
+212,Ceredigion,clothing,19659924
+213,Peeblesshire,clothing,19625835
+214,Bracknell Forest,fruits & vegetables,19463981
+215,Larne,clothing,19458461
+216,Bridgend,fruits & vegetables,19399588
+217,Bracknell Forest,dairy,19398293
+218,Bridgend,dairy,19344340
+219,Hampshire,dairy,19271113
+220,Hampshire,fruits & vegetables,19269909
+221,Nottinghamshire,dairy,19253171
+222,Barry,fruits & vegetables,19224564
+223,Chorley,fruits & vegetables,19214384
+224,Rhoose,dairy,19194483
+225,Barry,dairy,19173902
+226,Nottinghamshire,fruits & vegetables,19167276
+227,Chorley,dairy,19164432
+228,Bedford Borough,fruits & vegetables,19161384
+229,Oxford,fruits & vegetables,19140321
+230,Rhoose,fruits & vegetables,19126328
+231,Belfast,fruits & vegetables,19110073
+232,Fareham,fruits & vegetables,19085586
+233,Oxford,dairy,19080220
+234,Norfolk,fruits & vegetables,19043222
+235,Belfast,dairy,19034478
+236,Norfolk,dairy,19026628
+237,Bedford Borough,dairy,19019114
+238,Harrow,dairy,19013278
+239,Isle of Wight,fruits & vegetables,19010076
+240,Dumfries and Galloway,fruits & vegetables,18977809
+241,Harrow,fruits & vegetables,18953719
+242,Dumfries and Galloway,dairy,18951793
+243,Isle of Wight,dairy,18941345
+244,Fareham,dairy,18939559
+245,Powys,dairy,18851035
+246,Hinckley and Bosworth,fruits & vegetables,18849309
+247,Powys,fruits & vegetables,18836405
+248,Hinckley and Bosworth,dairy,18829959
+249,Bracknell Forest,clothing,18367956
+250,Stockton-on-Tees,meat & fish,18359528
+251,Isle of Anglesey,meat & fish,18351632
+252,Bridgend,clothing,18332120
+253,Rhoose,clothing,18320594
+254,Uttlesford,meat & fish,18319836
+255,Reigate and Banstead,meat & fish,18251122
+256,Hampshire,clothing,18249409
+257,Worcestershire,meat & fish,18247472
+258,Rushcliffe,meat & fish,18241968
+259,York,meat & fish,18221869
+260,Newark and Sherwood,meat & fish,18218353
+261,Selby,meat & fish,18216032
+262,Barry,clothing,18215042
+263,Shepway,meat & fish,18207325
+264,Hackney,meat & fish,18204630
+265,Nottinghamshire,clothing,18169867
+266,Belfast,clothing,18163816
+267,Lancashire,meat & fish,18154068
+268,Darlington,meat & fish,18148956
+269,Oxford,clothing,18144766
+270,Chorley,clothing,18144482
+271,Bedford Borough,clothing,18139388
+272,East Dunbartonshire,meat & fish,18083634
+273,Glasgow City,meat & fish,18080737
+274,Isle of Wight,clothing,18069542
+275,Dumfries and Galloway,clothing,18068258
+276,West Oxfordshire,meat & fish,18043687
+277,Harrow,clothing,18021094
+278,Lincolnshire,meat & fish,18005265
+279,Ballymoney,meat & fish,17988402
+280,Norfolk,clothing,17974647
+281,Bargoed,meat & fish,17958252
+282,Colchester,meat & fish,17940283
+283,Fareham,clothing,17937490
+284,Hinckley and Bosworth,clothing,17933067
+285,Bedfordshire,meat & fish,17910111
+286,Sevenoaks,meat & fish,17884017
+287,Armagh,meat & fish,17854005
+288,Powys,clothing,17810622
+289,Rugby,meat & fish,17785894
+290,East Hertfordshire,meat & fish,17779878
+291,East Lindsey,computing,17532420
+292,Newark and Sherwood,fruits & vegetables,17515750
+293,Isle of Anglesey,dairy,17502388
+294,Uttlesford,fruits & vegetables,17468488
+295,Isle of Anglesey,fruits & vegetables,17458993
+296,Hackney,fruits & vegetables,17455757
+297,Stockton-on-Tees,dairy,17452432
+298,Hackney,dairy,17449762
+299,Uttlesford,dairy,17442357
+300,Newark and Sherwood,dairy,17430165
+301,Shepway,dairy,17400687
+302,Stockton-on-Tees,fruits & vegetables,17400099
+303,Rushcliffe,fruits & vegetables,17383638
+304,Shepway,fruits & vegetables,17371894
+305,Rushcliffe,dairy,17366302
+306,Selby,fruits & vegetables,17356510
+307,Darlington,dairy,17354933
+308,Lancashire,fruits & vegetables,17353613
+309,Darlington,fruits & vegetables,17342816
+310,Worcestershire,dairy,17315734
+311,York,fruits & vegetables,17306079
+312,Selby,dairy,17296460
+313,Reigate and Banstead,fruits & vegetables,17291353
+314,York,dairy,17287356
+315,Glasgow City,dairy,17278602
+316,Lancashire,dairy,17271323
+317,Reigate and Banstead,dairy,17266052
+318,Worcestershire,fruits & vegetables,17234532
+319,Glasgow City,fruits & vegetables,17217930
+320,Colchester,fruits & vegetables,17215940
+321,West Oxfordshire,fruits & vegetables,17208996
+322,Sevenoaks,fruits & vegetables,17204503
+323,Lincolnshire,fruits & vegetables,17182304
+324,Bargoed,dairy,17181465
+325,East Dunbartonshire,dairy,17179913
+326,East Dunbartonshire,fruits & vegetables,17155827
+327,Ballymoney,fruits & vegetables,17140263
+328,West Oxfordshire,dairy,17139831
+329,Ballymoney,dairy,17130191
+330,Bargoed,fruits & vegetables,17110116
+331,Rugby,dairy,17103228
+332,Lincolnshire,dairy,17077103
+333,Colchester,dairy,17073192
+334,Sevenoaks,dairy,17072579
+335,Armagh,dairy,17028853
+336,Falkirk,computing,16998852
+337,Rugby,fruits & vegetables,16994824
+338,Bedfordshire,fruits & vegetables,16990025
+339,Bedfordshire,dairy,16976162
+340,Armagh,fruits & vegetables,16918937
+341,East Hertfordshire,dairy,16894007
+342,East Hertfordshire,fruits & vegetables,16883208
+343,Stockton-on-Tees,clothing,16720255
+344,Isle of Anglesey,clothing,16686008
+345,Hackney,clothing,16661838
+346,Newark and Sherwood,clothing,16653540
+347,Uttlesford,clothing,16568212
+348,Rushcliffe,clothing,16520684
+349,Shepway,clothing,16448957
+350,Lancashire,clothing,16444578
+351,Darlington,clothing,16438890
+352,Selby,clothing,16428683
+353,Glasgow City,clothing,16394533
+354,Lincolnshire,clothing,16389476
+355,York,clothing,16384375
+356,Reigate and Banstead,clothing,16381699
+357,Worcestershire,clothing,16356344
+358,East Dunbartonshire,clothing,16347062
+359,Colchester,clothing,16293649
+360,Ballymoney,clothing,16267509
+361,Sevenoaks,clothing,16259073
+362,Bargoed,clothing,16254712
+363,West Oxfordshire,clothing,16243114
+364,Bassetlaw,bakery,16154642
+365,Rugby,clothing,16144837
+366,Armagh,clothing,16130387
+367,Bedfordshire,clothing,16120326
+368,Bassetlaw,gaming,16082118
+369,East Hertfordshire,clothing,16019607
+370,East Cambridgeshire,appliances,15101762
+371,Flintshire,gaming,15042945
+372,Flintshire,bakery,15007351
+373,South Northamptonshire,bakery,14931421
+374,Lincoln,bakery,14885553
+375,South Northamptonshire,gaming,14880371
+376,Wyre,bakery,14859128
+377,Epsom and Ewell,gaming,14839235
+378,Cheshire East,bakery,14838718
+379,Tyne and Wear,bakery,14833264
+380,Lincoln,gaming,14827856
+381,Richmondshire,bakery,14822496
+382,Epsom and Ewell,bakery,14821125
+383,Stoke-on-Trent,gaming,14816903
+384,Fylde,gaming,14808006
+385,North Ayrshire,bakery,14804151
+386,Wyre,gaming,14803120
+387,Greater London,appliances,14787968
+388,Cheshire East,gaming,14785806
+389,Tyne and Wear,gaming,14785154
+390,Sefton,gaming,14744535
+391,North Ayrshire,gaming,14742216
+392,Newham,gaming,14733233
+393,Lambeth,gaming,14731062
+394,Richmondshire,gaming,14727702
+395,Swansea,bakery,14724090
+396,Warwickshire,appliances,14718024
+397,Newham,bakery,14711760
+398,Forest of Dean,bakery,14701867
+399,Dorset,gaming,14697572
+400,Fylde,bakery,14695414
+401,Lambeth,bakery,14690629
+402,Castle Point,gaming,14679725
+403,Dorset,bakery,14670813
+404,Stoke-on-Trent,bakery,14670615
+405,Staffordshire,gaming,14670504
+406,Castle Point,bakery,14667309
+407,Staffordshire,bakery,14665707
+408,Haringey,bakery,14660681
+409,East Sussex,gaming,14658079
+410,Orkney,appliances,14655232
+411,Forest of Dean,gaming,14645015
+412,Swansea,gaming,14638506
+413,Sefton,bakery,14630192
+414,Haringey,gaming,14607885
+415,Chiltern,gaming,14603522
+416,East Sussex,bakery,14603406
+417,Kent,appliances,14601282
+418,Chiltern,bakery,14559546
+419,Mole Valley,gaming,14527728
+420,Ceredigion,gaming,14519494
+421,Ceredigion,bakery,14511468
+422,Lichfield,gaming,14502416
+423,East Devon,bakery,14485469
+424,Lichfield,bakery,14469274
+425,Mole Valley,bakery,14459991
+426,Peeblesshire,gaming,14446385
+427,Peeblesshire,bakery,14446025
+428,East Devon,gaming,14442656
+429,Larne,gaming,14310165
+430,Larne,bakery,14265238
+431,North Yorkshire,appliances,14126014
+432,Bracknell Forest,bakery,13551817
+433,Bridgend,gaming,13536625
+434,Bridgend,bakery,13496502
+435,Nottinghamshire,bakery,13489399
+436,Hampshire,gaming,13485463
+437,Bracknell Forest,gaming,13475026
+438,Hampshire,bakery,13447824
+439,Chorley,gaming,13435962
+440,Barry,gaming,13413233
+441,Rhoose,gaming,13409359
+442,Barry,bakery,13409292
+443,Chorley,bakery,13396033
+444,Rhoose,bakery,13391943
+445,Nottinghamshire,gaming,13391679
+446,Belfast,gaming,13384234
+447,Oxford,bakery,13377104
+448,Bedford Borough,gaming,13360794
+449,Bedford Borough,bakery,13342662
+450,Belfast,bakery,13332316
+451,Dumfries and Galloway,gaming,13324650
+452,Norfolk,bakery,13298062
+453,Dumfries and Galloway,bakery,13285130
+454,Harrow,bakery,13284602
+455,Oxford,gaming,13264578
+456,Fareham,bakery,13263991
+457,Norfolk,gaming,13261174
+458,Isle of Wight,gaming,13248072
+459,Isle of Wight,bakery,13236374
+460,Islington,appliances,13228688
+461,Powys,gaming,13216870
+462,Fareham,gaming,13214425
+463,Hinckley and Bosworth,gaming,13197498
+464,West Somerset,appliances,13195024
+465,Harrow,gaming,13193046
+466,Hinckley and Bosworth,bakery,13153044
+467,Powys,bakery,13144661
+468,East Cambridgeshire,computing,12739964
+469,Warwickshire,computing,12685472
+470,Greater London,computing,12572454
+471,Orkney,computing,12569594
+472,Kent,computing,12494708
+473,Isle of Anglesey,bakery,12265397
+474,Uttlesford,gaming,12250157
+475,Newark and Sherwood,gaming,12242028
+476,Isle of Anglesey,gaming,12241012
+477,Rushcliffe,bakery,12229791
+478,Uttlesford,bakery,12223115
+479,Selby,gaming,12205289
+480,North Yorkshire,computing,12201188
+481,Rushcliffe,gaming,12196574
+482,Stockton-on-Tees,bakery,12193274
+483,Stockton-on-Tees,gaming,12188428
+484,Newark and Sherwood,bakery,12185634
+485,Hackney,gaming,12177914
+486,Hackney,bakery,12155605
+487,Reigate and Banstead,bakery,12153640
+488,York,bakery,12144604
+489,Lancashire,gaming,12134666
+490,Darlington,gaming,12128822
+491,Selby,bakery,12122269
+492,Darlington,bakery,12122025
+493,York,gaming,12121985
+494,Shepway,bakery,12114026
+495,Worcestershire,bakery,12113619
+496,Lancashire,bakery,12108094
+497,Worcestershire,gaming,12095912
+498,Reigate and Banstead,gaming,12060869
+499,Glasgow City,gaming,12060661
+500,Glasgow City,bakery,12053328
+501,Colchester,bakery,12048655
+502,Shepway,gaming,12037153
+503,Lincolnshire,gaming,12035110
+504,Neath Port Talbot,appliances,12032338
+505,Colchester,gaming,12020448
+506,Bargoed,gaming,12018234
+507,East Dunbartonshire,gaming,11991373
+508,West Oxfordshire,gaming,11991244
+509,Sevenoaks,bakery,11985665
+510,Ballymoney,gaming,11984429
+511,Bargoed,bakery,11962007
+512,West Oxfordshire,bakery,11957998
+513,Bedfordshire,gaming,11956795
+514,Ballymoney,bakery,11956123
+515,Lincolnshire,bakery,11955666
+516,Sevenoaks,gaming,11945933
+517,East Dunbartonshire,bakery,11937917
+518,Bedfordshire,bakery,11924599
+519,Rugby,gaming,11918499
+520,Armagh,gaming,11911759
+521,Rugby,bakery,11836486
+522,Wrexham,appliances,11831054
+523,Armagh,bakery,11828262
+524,East Hertfordshire,gaming,11824072
+525,East Hertfordshire,bakery,11820137
+526,West Somerset,computing,11330966
+527,Islington,computing,11264058
+528,Neath Port Talbot,computing,10337744
+529,Wrexham,computing,10024800
+530,Bassetlaw,appliances,8082453
+531,Lincoln,appliances,7490760
+532,Flintshire,appliances,7451236
+533,Stoke-on-Trent,appliances,7436809
+534,Wyre,appliances,7435815
+535,Cheshire East,appliances,7433477
+536,South Northamptonshire,appliances,7406904
+537,Richmondshire,appliances,7398586
+538,Forest of Dean,appliances,7386190
+539,Swansea,appliances,7378891
+540,Lambeth,appliances,7373789
+541,Sefton,appliances,7373085
+542,Epsom and Ewell,appliances,7363558
+543,Staffordshire,appliances,7361372
+544,North Ayrshire,appliances,7358618
+545,East Sussex,appliances,7341706
+546,Tyne and Wear,appliances,7337321
+547,Dorset,appliances,7329297
+548,Fylde,appliances,7327806
+549,Castle Point,appliances,7323329
+550,Haringey,appliances,7315938
+551,Chiltern,appliances,7294300
+552,Newham,appliances,7283476
+553,Mole Valley,appliances,7278898
+554,Peeblesshire,appliances,7266710
+555,East Devon,appliances,7245892
+556,Lichfield,appliances,7235316
+557,Ceredigion,appliances,7221353
+558,Larne,appliances,7173511
+559,Bassetlaw,computing,6917314
+560,Bracknell Forest,appliances,6761946
+561,Bridgend,appliances,6746900
+562,Nottinghamshire,appliances,6746347
+563,Rhoose,appliances,6741594
+564,Barry,appliances,6728295
+565,Hampshire,appliances,6715848
+566,Chorley,appliances,6704173
+567,Dumfries and Galloway,appliances,6692117
+568,Bedford Borough,appliances,6669511
+569,Belfast,appliances,6658987
+570,Fareham,appliances,6646913
+571,Oxford,appliances,6631230
+572,Harrow,appliances,6630630
+573,Powys,appliances,6627725
+574,Isle of Wight,appliances,6610244
+575,Norfolk,appliances,6604332
+576,Hinckley and Bosworth,appliances,6545344
+577,Flintshire,computing,6414928
+578,Epsom and Ewell,computing,6363287
+579,Richmondshire,computing,6346211
+580,Swansea,computing,6345669
+581,Wyre,computing,6341541
+582,Lambeth,computing,6341140
+583,Lincoln,computing,6333896
+584,Cheshire East,computing,6332528
+585,Staffordshire,computing,6330223
+586,Stoke-on-Trent,computing,6326540
+587,North Ayrshire,computing,6324970
+588,South Northamptonshire,computing,6322911
+589,Castle Point,computing,6321353
+590,Fylde,computing,6314969
+591,Sefton,computing,6311283
+592,Dorset,computing,6308471
+593,Tyne and Wear,computing,6304592
+594,Haringey,computing,6295538
+595,Newham,computing,6283427
+596,East Sussex,computing,6281273
+597,Chiltern,computing,6274196
+598,Forest of Dean,computing,6248153
+599,Mole Valley,computing,6229735
+600,Ceredigion,computing,6218151
+601,East Devon,computing,6196195
+602,Lichfield,computing,6187616
+603,Peeblesshire,computing,6175733
+604,Larne,computing,6159242
+605,Isle of Anglesey,appliances,6126588
+606,Shepway,appliances,6124019
+607,Newark and Sherwood,appliances,6115230
+608,Selby,appliances,6114873
+609,Hackney,appliances,6105254
+610,Stockton-on-Tees,appliances,6091473
+611,Darlington,appliances,6086038
+612,Sevenoaks,appliances,6065058
+613,Uttlesford,appliances,6057754
+614,York,appliances,6049938
+615,Rushcliffe,appliances,6042277
+616,Glasgow City,appliances,6040843
+617,Worcestershire,appliances,6038895
+618,Bargoed,appliances,6034869
+619,Reigate and Banstead,appliances,6030847
+620,Lincolnshire,appliances,6029903
+621,Lancashire,appliances,6001816
+622,Rugby,appliances,5989504
+623,West Oxfordshire,appliances,5988962
+624,Bedfordshire,appliances,5988274
+625,Ballymoney,appliances,5974211
+626,Colchester,appliances,5962734
+627,East Dunbartonshire,appliances,5944712
+628,Armagh,appliances,5943002
+629,East Hertfordshire,appliances,5923191
+630,Hampshire,computing,5793872
+631,Bracknell Forest,computing,5788771
+632,Bridgend,computing,5785115
+633,Nottinghamshire,computing,5761047
+634,Rhoose,computing,5739895
+635,Barry,computing,5736822
+636,Bedford Borough,computing,5731700
+637,Belfast,computing,5725839
+638,Chorley,computing,5707142
+639,Oxford,computing,5695619
+640,Norfolk,computing,5688970
+641,Isle of Wight,computing,5684989
+642,Fareham,computing,5679796
+643,Dumfries and Galloway,computing,5663844
+644,Hinckley and Bosworth,computing,5626954
+645,Harrow,computing,5623506
+646,Powys,computing,5600150
+647,Newark and Sherwood,computing,5279932
+648,Shepway,computing,5255618
+649,Hackney,computing,5254155
+650,Isle of Anglesey,computing,5208320
+651,Darlington,computing,5208300
+652,Uttlesford,computing,5199857
+653,Lancashire,computing,5192244
+654,Rushcliffe,computing,5184524
+655,Worcestershire,computing,5184371
+656,Reigate and Banstead,computing,5183733
+657,Stockton-on-Tees,computing,5180506
+658,Glasgow City,computing,5180503
+659,West Oxfordshire,computing,5179161
+660,York,computing,5171193
+661,Selby,computing,5166702
+662,Bargoed,computing,5141538
+663,Sevenoaks,computing,5136204
+664,Ballymoney,computing,5135829
+665,Colchester,computing,5135300
+666,Lincolnshire,computing,5125099
+667,Bedfordshire,computing,5123951
+668,Rugby,computing,5115835
+669,East Dunbartonshire,computing,5102759
+670,Armagh,computing,5097497
+671,East Hertfordshire,computing,5081455

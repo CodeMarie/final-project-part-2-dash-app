@@ -34,6 +34,8 @@ Next if using Windows use the command
 env\Scripts\activate
 If using Mac or Unix this will be 
 Source env/bin/activate
+To leave this environment use the command 
+deactivate 
 
 This allows for pip install Dash.
 
@@ -43,8 +45,7 @@ Using standard convention
 import plotly.express as px
 import pandas as pd
 ```
-
-Note within the ipynb file pandas and plotly.express is imported.Click on Run All to begin executing these cells
+Note within the ipynb file pandas and plotly.express is imported. Click on Run All to begin executing these cells
 
 Within app.py 
 ```sh
@@ -57,6 +58,8 @@ from dash import dcc, html
 ## Data Files 
 Please refer to Dash-Project Part-One which informs further about the data cleansing of the original raw data. 
 The files imported from this process are csv files utilised by the Dashboard Application. 
+
+Note the brief informs of city information which is not available, as county information was, this was looked at in raw data however, as county is part of region, this was duplicating and excessive to the user in the graphs in creation of the dash app e.g. for Brief 1 there is already a graph for Top Product for Region Bottom Product for Region and Top Product Category for Region and Top Product Category for Region let alone duplicate these 4 to provide 8 graphs for one Brief question. As County forms part of the Region this was illustrated for top and bottom figures with the raw data for County still available. 
 
 ## Development Diary 
 
