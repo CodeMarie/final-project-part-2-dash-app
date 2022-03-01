@@ -6,8 +6,6 @@ from dash.dependencies import Input, Output, State
 import pandas as pd
 import plotly_express as px
 
-
-
 # csv imports for Brief 1 
 product_region = pd.read_csv('csvs_clean/brief_1_quantity_per_product_per_region.csv', index_col=[0])
 prod_cat_region = pd.read_csv('csvs_clean/brief_1_quant_per_prod_cat_per_region.csv', index_col=[0])
@@ -90,21 +88,37 @@ app.layout = html.Div([
         ),
         dcc.Dropdown(
         placeholder ='Select the Year to visualise',
-        options= {
-        '2010': '2010',
-        '2011': '2011',
-        '2012': '2012',
-        '2013': '2013',
-        '2014': '2014',
-        '2015': '2015',
-        '2016': '2016',
-        '2017': '2017',
-        '2018': '2018',
-        '2019': '2019',
-        '2020': '2020',
-        }, 
-        value='2020',
+        options= [
+        { 'label': '2010', 'value': 2010},
+        { 'label': '2011', 'value': 2011},
+        { 'label': '2012', 'value': 2012},
+        { 'label': '2013', 'value': 2013},
+        { 'label': '2014', 'value': 2014},
+        { 'label': '2015', 'value': 2015},        
+        { 'label': '2016', 'value': 2016},
+        { 'label': '2017', 'value': 2017},
+        { 'label': '2018', 'value': 2018},        
+        { 'label': '2019', 'value': 2019},
+        { 'label': '2020', 'value': 2020}
+        ], 
         id='year-sales-dd',
+        ),
+        dcc.Dropdown(
+        options=[
+        { 'label': 'January', 'value': 1},
+        { 'label': 'February', 'value': 2},
+        { 'label': 'March', 'value': 3},
+        { 'label': 'April', 'value': 4},
+        { 'label': 'May', 'value': 5},
+        { 'label': 'June', 'value':6},        
+        { 'label': 'July', 'value': 7},
+        { 'label': 'August', 'value': 8},
+        { 'label': 'September', 'value': 9},        
+        { 'label': 'October', 'value': 10},
+        { 'label': 'November', 'value': 11},
+        { 'label': 'December', 'value': 12}
+        ],
+        id='month-sales-dd',
         ),
     # dcc.DatePickerSingle(
     #     date='2020-01-01',
@@ -218,13 +232,14 @@ def show_performance( button_click, top_bot, selected_region):
     # State(component_id='date-picker', component_property='date')
     State(component_id='region-sales-dropdown', component_property='value'), # dropdown for regions for the performance graph
     State(component_id='year-sales-dd', component_property='value'), # dropdown for Year for the performance graph
+    State(component_id='month-sales-dd', component_property='value'), # dropdown for Year for the performance graph
 )
 
 # in test took out argument of date picker selected_datetime
-def sales_graph( button_click, selected_region):
+def sales_graph( button_click, selected_region, year_dd, month_dd):
     # if selected_datetime is not None :
         # return f'Selected Date: {selected_datetime}',
-    if [ selected_region] is not None:
+    if [ selected_region, year_dd, month_dd] is not None:
         # if top_bot == 'top':
             branch_selected = perform_region[perform_region['region'] == selected_region].head(10) # selection from the brief 2 csv displaying top 10 for selected region
             # print(branch_selected['branch_name']) 
@@ -236,9 +251,9 @@ def sales_graph( button_click, selected_region):
             # first filter and iteration
             sales_df_filtered = sales_df[sales_df['branch_name'].isin(value_list) ]
             # second iteration 
-            sales_df_filtered_by_year = sales_df_filtered[sales_df_filtered['year'] == 2012]
+            sales_df_filtered_by_year = sales_df_filtered[sales_df_filtered['year'] == year_dd]
             # third iteration 
-            sales_df_filtered_by_month = sales_df_filtered_by_year[sales_df_filtered_by_year['month'] == 1].sort_values(by ='hour')
+            sales_df_filtered_by_month = sales_df_filtered_by_year[sales_df_filtered_by_year['month'] == month_dd].sort_values(by ='hour')
             
             figure = px.line(sales_df_filtered_by_month, x='hour', y='amount_in_gbp', color='branch_name', title=f'The Regional Top Ten - Hourly Sales for Branches within the Region of {selected_region}', hover_data=['amount_in_gbp'] )
             return figure 
