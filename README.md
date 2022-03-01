@@ -9,12 +9,24 @@ At the time of developing pip was used rather than pip3 for the upgrade and furt
 The requirements for this dash application includes jupyter notebooks which uses the extension ipynb and Pandas.
 If not already globally installed the terminal use the command (if using the first cell of the data.ipynb file precede the command with an exclamation mark and a space e.g. ! pip install pandas)
 
+To visualise the cleansed data an notebook was made called data.ipybn
 ```sh
 pip install notebook
 pip install pandas
-# pip install dash-bootstrap-components
 ```
-Setting up the environment 
+
+## Project Brief 
+
+- 1. Track the most purchased and least purchased products & product categories
+overall, per region and per county (limit to top 5 and least 5)
+- 2. Track the best performing branches overall per region and per city 
+measured in both item quantity sold and monetary value of sales made, limit to best
+10 and worst 10)
+- 3. Per hour sales for the top 10 branches identified
+- 4. Identify the top 10 and bottom 10 profitable branches and indicate how profitable they
+are. (Calculate profitability by subtracting expense from total sales)
+
+- Instructions for Use 
 
 A Jupyter Notebook in a file called data.ipybn was created for testing of the implemented csv files. 
 
@@ -47,19 +59,29 @@ import pandas as pd
 ```
 Note within the ipynb file pandas and plotly.express is imported. Click on Run All to begin executing these cells
 
+Create an app.py file
+Ensure the following is imported 
+
 Within app.py 
 ```sh
 import dash
 import dash_bootstrap_components as dbc
-from dash.dependencies import Input, Output
+from dash.dependencies import Input, Output, State
 from dash import dcc, html 
+import pandas as pd
+import plotly_express as px 
 ```
+
+BOOTSTRAP 
 
 ## Data Files 
 Please refer to Dash-Project Part-One which informs further about the data cleansing of the original raw data. 
 The files imported from this process are csv files utilised by the Dashboard Application. 
 
 Note the brief informs of city information which is not available, as county information was, this was looked at in raw data however, as county is part of region, this was duplicating and excessive to the user in the graphs in creation of the dash app e.g. for Brief 1 there is already a graph for Top Product for Region Bottom Product for Region and Top Product Category for Region and Top Product Category for Region let alone duplicate these 4 to provide 8 graphs for one Brief question. As County forms part of the Region this was illustrated for top and bottom figures with the raw data for County still available. 
+
+Note that there are not always ten branches in each region which means the difference in top and bottom ten results for performance does not result in any difference in the data shown. 
+As the description of of the need for performance as an indicator (sales multiplied by quantity) had some ambiguity in its use of a business indicator as the amount_of_gbp is and can be typically used as an indicator in itself, a hover_data was provided to also show the sales and amount_in_gbp separately.  
 
 ## Development Diary 
 
@@ -71,8 +93,7 @@ Gunicorn 'Green Unicorn' is a Python WSGI production grade HTTP Server for UNIX
 A ProcFile is used for Heroku deployment with web: gunicorn app:server 
 A requirements.txt file is created with pip freeze > requirements.txt
 
-References 
-
+# References 
 
 - Jupyter Notebooks in Visual Code https://code.visualstudio.com/docs/datascience/jupyter-notebooks
 
