@@ -25,7 +25,7 @@ grouped_region_list = prod_cat_region['region'].drop_duplicates().tolist()
 
 # setup
 app =  dash.Dash(__name__, title='Dashboard Retail Information')
-# server = app.server
+server = app.server
 
 df1 = pd.read_csv('csvs_clean/brief_1_quantity_per_product_per_region.csv')
 
