@@ -92,7 +92,7 @@ As the description of of the need for performance as an indicator (sales multipl
 
 ## Development Diary 
 
-- For styling there is the option of Dash Bootstrap Components which can be installed with pip install dash-bootstrap-components to be imported and reference to both dbc.themes.BOOTSTRAP and dbc.icons.BOOTSTRAP for a small icon used in the user advisory. 
+- For styling there is the option of Dash Bootstrap Components which can be installed with pip install dash-bootstrap-components to be imported and reference to both dbc.themes.    BOOTSTRAP and dbc.icons.BOOTSTRAP for a small icon used in the user advisory. 
 
 - Pandas was imported within app.py which holds the Dash application and data.ipybn which holds the testing of files and organisation of cleansed csv files. 
 
@@ -100,11 +100,13 @@ The first three brief points for the Dash Application reference Region data, the
 
 Deployment took place with Heroku. 
 
-Note that whitenoise needs to be in place to carry through the CSS styling for the deployment server. The following needs to be added to the app.py 
+Note that whitenoise needs to be in place to carry through the CSS static styling to the deployment server. The following needs to be added to the app.py 
 from whitenoise import WhiteNoise
+
 server = app.server
-server.wsgi_app = WhiteNoise(server.wsgi_app, root=‘static/’)
-Additionally the static css files need to be added to a 'static' root folder 
+server.wsgi_app = WhiteNoise(server.wsgi_app, root='asset/')
+
+Additionally the static css files need to be added to a 'asset' root folder. Please ensure whitenoise is added to the requirements.txt file.
 
 To add a different preferred style of marker on the line graph using Plotly explore the link in references below.
 
@@ -123,7 +125,7 @@ This will bring up an sentence for example Dash is running on http://127.0.0.1:8
 Deployment used a Heroku account. Be aware if within EU, for GDPR select an application hosted on an European server if situated within EU or GB or follow relevant local rules.
 
 Ensure there is a .gitignore file in place which contains any large files and .env/
-Upload to Github Repository and then follow the steps on Heroku to connect this repository and 
+Upload to Github Repository and then follow the steps on Heroku to connect this repository, i.e. link Github repo and deploy and run app after build is complete. If any errors occur view logs for further insight. 
 
 
 # References 
@@ -137,5 +139,6 @@ Upload to Github Repository and then follow the steps on Heroku to connect this 
 - Dash Bootstrap with a test app code https://dash-bootstrap-components.opensource.faculty.ai/docs/quickstart/
 
 - Whitenoise required for styling to be transferred from static file for Heroku http://whitenoise.evans.io/en/stable/
+- The community page within Plotly provided the exact whitenoise statement which worked for this project. The only difference was the replacement of static folder with an asset     folder. The link for that page is here https://community.plotly.com/t/deploying-your-dash-app-to-heroku-the-magical-guide/46723
 
 - Markers types for Plotly https://plotly.com/python/line-charts/

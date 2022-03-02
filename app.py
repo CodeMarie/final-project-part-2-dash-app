@@ -5,7 +5,6 @@ from dash.dependencies import Input, Output, State
 import pandas as pd
 import plotly_express as px
 import dash_bootstrap_components as dbc
-
 from whitenoise import WhiteNoise
 
 
