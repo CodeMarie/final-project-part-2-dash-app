@@ -19,8 +19,10 @@ sales_hour_df = pd.read_csv('csvs_clean/brief_3_hour_sales_branches.csv', index_
 #Csv for Brief 4 
 profitability_per_branch_df = pd.read_csv('csvs_clean/brief_4_profitability_per_branch.csv', index_col=[0])
 
-# variables from csv data 
+
+# variables from csv data to save for region and branch list 
 grouped_region_list = prod_cat_region['region'].drop_duplicates().tolist()
+grouped_branches = profitability_per_branch_df['branch_name'].drop_duplicates().tolist()
 
 
 # setup
@@ -32,6 +34,8 @@ df1 = pd.read_csv('csvs_clean/brief_1_quantity_per_product_per_region.csv')
 app.layout = html.Div([
     html.H1('Retail Regional Dashboard'),
     html.Br(),
+    html.Br(),
+    html.H2('The Best or Worst Product and Product Categories'),
     html.Br(),
     dcc.Dropdown(
         placeholder ='Select the Best or Worst results',
@@ -59,6 +63,8 @@ app.layout = html.Div([
     dcc.Graph(id='region-best-worst-products', figure={})]),
     html.Br(), 
     html.Br(),
+    html.H2('The Best or Worst Performing Branches'),
+    html.Br(),
     dcc.Dropdown(
         placeholder ='Select the Best or Worst results',
         options=[{'label': 'Top', 'value': 'top'},
@@ -81,12 +87,14 @@ app.layout = html.Div([
     html.Br(),
 
     html.Br(), # Layout for Brief 3 
-        dcc.Dropdown(
+    html.Br(),
+    html.H2('The Hourly Sales Data for the Top Ten Performing Branches'),
+    dcc.Dropdown(
         placeholder ='Select a Region',
         options=[{'label': i, 'value': i} for i in grouped_region_list],
         id='region-sales-dropdown',
         ),
-        dcc.Dropdown(
+    dcc.Dropdown(
         placeholder ='Select the Year to visualise',
         options= [
         { 'label': '2010', 'value': 2010},
@@ -103,7 +111,7 @@ app.layout = html.Div([
         ], 
         id='year-sales-dd',
         ),
-        dcc.Dropdown(
+    dcc.Dropdown(
         options=[
         { 'label': 'January', 'value': 1},
         { 'label': 'February', 'value': 2},
@@ -120,58 +128,39 @@ app.layout = html.Div([
         ],
         id='month-sales-dd',
         ),
-    # dcc.DatePickerSingle(
-    #     date='2020-01-01',
-    #     display_format='MMM DD YYYY', 
-    #     id='date-picker'
-    # ),
     html.Br(),
     html.Br(),
     html.Div([
-    # dcc.RangeSlider( 
-    #    marks={ 
-    #             0: '12am',     # key=position, value=what is shown {'label': '5', 'style':  'font-weight':'bold'}},
-    #             1: '1am',
-    #             2: '2am',
-    #             3: '3am',
-    #             4: '4am',
-    #             5: '5am',
-    #             6: '6am',
-    #             7: '7am',
-    #             8: '8am',
-    #             9: '9am',
-    #             10: '10am',
-    #             11: '11am',
-    #             12: '12pm',
-    #             13: '1pm',
-    #             14: '2pm',
-    #             15: '3pm',
-    #             16: '4pm',
-    #             17: '5pm',
-    #             18: '6pm',
-    #             19: '7pm',
-    #             20: '8pm',
-    #             21: '9pm',
-    #             22: '10pm',
-    #             23: '11pm'
-    #             },
-    #         step=1, min=0, max=23, value=[0, 1], id='hour-range-slider', tooltip = { 'always_visible': True }, updatemode='drag'),
-    # html.Div(id='output-container-range-slider'),
     html.Br(),
     html.Button('Click to Show Graph', id='plot-graph-btn3', n_clicks=0),
     dcc.Graph(id='sales-hour-performance', figure={})]),
     html.Br(),
     html.Br(),
+    html.Br(),
+    html.H2('Profitability for the Best or Worst Performing Branches'),
+    dcc.Dropdown(
+        placeholder ='Select the Best or Worst results',
+        options=[{'label': 'Top', 'value': 'top'},
+                {'label': 'Bottom', 'value': 'bottom'}],
+        id='top-bot-profitability-dd',
+        ),
+    html.Br(),
+    html.Br(),
+    html.Button('Click to Show Graph', id='plot-graph-btn4', n_clicks=0),
+    html.Br(),
+    html.Div([
+    dcc.Graph(id='best-worst-profitability', figure={})]),
+    html.Br()
     ])
 
 
 # Callback for Brief 1 to display top or bottom results either Products or Product Category for the selected region from dropdown and plot graph on button click 
 @app.callback(
-        Output(component_id='region-best-worst-products', component_property='figure'),
-        Input(component_id='plot-graph-btn', component_property='n_clicks'),
-        State(component_id='top-bot-products-dd', component_property='value'),
-        State(component_id='products-product-category-dd', component_property='value'),
-        State(component_id='region-dropdown', component_property='value'),
+        Output(component_id='region-best-worst-products', component_property='figure'), # Output of graph as figure 
+        Input(component_id='plot-graph-btn', component_property='n_clicks'),            # Input from button to display the graph
+        State(component_id='top-bot-products-dd', component_property='value'),          # State - selection of top or bottom values from dropdown without callback initiated
+        State(component_id='products-product-category-dd', component_property='value'), # Dropdown of Products or Category 
+        State(component_id='region-dropdown', component_property='value'),              # Dropdown for region 
  )
 
 #input in first provided as option to request the Products or Category data
@@ -210,14 +199,12 @@ def request_products(button_click, top_bot, prod_prod_cat, selected_region):
 def show_performance( button_click, top_bot, selected_region):
     if [top_bot,  selected_region] is not None:
         if top_bot == 'top':
-            branch_selected = perform_region[perform_region['region'] == selected_region].head(10) # selection from the brief 2 csv displaying top 10 for selected region
+            branch_selected = perform_region[perform_region['region'] == selected_region].head(10) 
             figure = px.bar(branch_selected, x='branch_name', y='performance', color='performance', title=f'The Regional Top Ten - Performing Branches for the Region of {selected_region}', hover_data=['amount_in_gbp', 'performance', 'quantity'] )
-            print(branch_selected)
             return figure 
         else: 
             branch_selected = perform_region[perform_region['region'] == selected_region].tail(10)
-            figure = px.bar(branch_selected, x='branch_name', y='performance', color='performance', title=f'The Regional Bottom Ten - Performing Branches for the Region of {selected_region}', hover_data=['amount_in_gbp', 'performance', 'quantity'] )
-            print(branch_selected) 
+            figure = px.bar(branch_selected, x='branch_name', y='performance', color='performance', title=f'The Regional Bottom Ten - Performing Branches for the Region of {selected_region}', hover_data=['amount_in_gbp', 'performance', 'quantity'] ) 
             return figure     
     else:
         return {}
@@ -225,30 +212,19 @@ def show_performance( button_click, top_bot, selected_region):
 #app callback for brief 3 
 @app.callback(
     Output(component_id='sales-hour-performance', component_property='figure'),
-    # Output(component_id='output-container-range-slider', component_property='children'),
     Input(component_id='plot-graph-btn3', component_property='n_clicks'),
-    # State(component_id='top-bot-sales-dd', component_property='value'),  # dropdown for top or bottom fields for performance display
-    # Input(component_id='hour-range-slider', component_property='value'),
-    # State(component_id='date-picker', component_property='date')
-    State(component_id='region-sales-dropdown', component_property='value'), # dropdown for regions for the performance graph
-    State(component_id='year-sales-dd', component_property='value'), # dropdown for Year for the performance graph
-    State(component_id='month-sales-dd', component_property='value'), # dropdown for Year for the performance graph
+    State(component_id='region-sales-dropdown', component_property='value'), 
+    State(component_id='year-sales-dd', component_property='value'), 
+    State(component_id='month-sales-dd', component_property='value'), 
 )
 
 # in test took out argument of date picker selected_datetime
 def sales_graph( button_click, selected_region, year_dd, month_dd):
-    # if selected_datetime is not None :
-        # return f'Selected Date: {selected_datetime}',
     if [ selected_region, year_dd, month_dd] is not None:
-        # if top_bot == 'top':
             branch_selected = perform_region[perform_region['region'] == selected_region].head(10) # selection from the brief 2 csv displaying top 10 for selected region
-            # print(branch_selected['branch_name']) 
             value_list = branch_selected['branch_name'].values.tolist()
-            print(value_list) 
             sales_df = pd.read_csv('csvs_clean/brief_3_hour_sales_branches.csv', index_col=[0])
-
-
-            # first filter and iteration
+            # first filter and iteration to ensure only the top ten representing branch_selected is filtered from the full hourly sales df of all branches
             sales_df_filtered = sales_df[sales_df['branch_name'].isin(value_list) ]
             # second iteration 
             sales_df_filtered_by_year = sales_df_filtered[sales_df_filtered['year'] == year_dd]
@@ -260,8 +236,26 @@ def sales_graph( button_click, selected_region, year_dd, month_dd):
     else:
         return {}
 
+#Brief 4 callback 
+@app.callback(
+    Output(component_id='best-worst-profitability', component_property='figure'),
+    Input(component_id='plot-graph-btn4', component_property='n_clicks'),
+    State(component_id='top-bot-profitability-dd', component_property='value'), 
+)
 
+def profitability_graph(button_click, top_bot):    
+    if [top_bot] is not None:
+        if top_bot == 'top':
+            branch_profit = profitability_per_branch_df.head(10) 
+            figure = px.pie(branch_profit, values='profitability', names='branch_name', title=f'The Ten Most Profitable Branches', hover_data=['profitability'] )
+            return figure 
+        else: 
+            branch_profit = profitability_per_branch_df.tail(10) 
+            branch_profit.dropna(axis=0, how='any', inplace=True)          
+            figure = px.pie(branch_profit, values='profitability', names='branch_name', title=f'The Ten Least Profitable Branches', hover_data=['profitability'] )
+            return figure     
+    else:
+        return {}
 
-#run ensures we dont try to run the app using both gunicorn and flasks in built server
 if __name__ == '__main__':
     app.run_server(debug=True)

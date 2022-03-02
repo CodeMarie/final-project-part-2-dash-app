@@ -87,11 +87,29 @@ As the description of of the need for performance as an indicator (sales multipl
 
 - For styling there is the option of Dash Bootstrap Components which can be installed with pip install dash-bootstrap-components to be imported
 
+- Pandas was imported within app.py which holds the Dash application and data.ipybn which holds the testing of files and organisation of cleansed csv files. 
+
+The first three brief points for the Dash Application reference Region data, the final brief references the top ten and least ten from all branches. A NaN value which would alter the results was found within amount_in_gbp and profitability columns for St.Edmundsbury branch relating to the fourth brief. This was tackled with dropna() the axis of 0 indicates row rather than column and how=any means just partial NaN like this instance is tackled rather than all.
+
+Deployment took place with Heroku. 
+
+Note that WHITENOISE needs to be in place to carry through the CSS styling for the deployment server. 
+
 ## Deployment
 A runtime.txt file needs to hold the version of Python used which is needed for the Heroku server 
 Gunicorn 'Green Unicorn' is a Python WSGI production grade HTTP Server for UNIX
 A ProcFile is used for Heroku deployment with web: gunicorn app:server 
 A requirements.txt file is created with pip freeze > requirements.txt
+
+To run in local host type in the name in the file of the file preceded by python or py version beforehand e.g. 
+py app.py
+This will bring up an sentence for example Dash is running on http://127.0.0.1:8050/ to click. 
+
+Deployment used a Heroku account. Be aware if within EU, for GDPR select an application hosted on an European server if situated within EU or GB or follow relevant local rules.
+
+Ensure there is a .gitignore file in place which contains any large files and .env/
+Upload to Github Repository and then follow the steps on Heroku to connect this repository and 
+
 
 # References 
 
