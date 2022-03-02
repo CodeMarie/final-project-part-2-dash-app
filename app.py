@@ -9,8 +9,6 @@ import dash_bootstrap_components as dbc
 from whitenoise import WhiteNoise
 
 
-
-
 # csv imports for Brief 1 
 product_region = pd.read_csv('csvs_clean/brief_1_quantity_per_product_per_region.csv', index_col=[0])
 prod_cat_region = pd.read_csv('csvs_clean/brief_1_quant_per_prod_cat_per_region.csv', index_col=[0])
@@ -31,7 +29,7 @@ grouped_branches = profitability_per_branch_df['branch_name'].drop_duplicates().
 # setup
 app =  dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP], title='Dashboard Retail Information' )
 server = app.server
-server.wsgi_app = WhiteNoise(server.wsgi_app, root='static/')
+server.wsgi_app = WhiteNoise(server.wsgi_app, root='assets/')
 
 df1 = pd.read_csv('csvs_clean/brief_1_quantity_per_product_per_region.csv')
 
