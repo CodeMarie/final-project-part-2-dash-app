@@ -10,10 +10,17 @@ The requirements for this dash application includes jupyter notebooks which uses
 If not already globally installed the terminal use the command (if using the first cell of the data.ipynb file precede the command with an exclamation mark and a space e.g. ! pip install pandas)
 
 To visualise the cleansed data an notebook was made called data.ipybn
+To create the Dash Application layout app.py was created. Specifically plotly_express, Dash, whitenoise and Pandas will be used here.
+
 ```sh
 pip install notebook
 pip install pandas
+pip install dash
+pip install dash-bootstrap-components
+pip install plotly_express
+pip install whitenoise
 ```
+See below for the importing from these installations
 
 ## Project Brief 
 
@@ -59,7 +66,7 @@ import pandas as pd
 ```
 Note within the ipynb file pandas and plotly.express is imported. Click on Run All to begin executing these cells
 
-Create an app.py file
+Within the app.py file
 Ensure the following is imported 
 
 Within app.py 
@@ -93,12 +100,16 @@ The first three brief points for the Dash Application reference Region data, the
 
 Deployment took place with Heroku. 
 
-Note that WHITENOISE needs to be in place to carry through the CSS styling for the deployment server. 
+Note that whitenoise needs to be in place to carry through the CSS styling for the deployment server. 
+
+To add a different preferred style of marker on the line graph using Plotly explore the link in references below.
 
 ## Deployment
-A runtime.txt file needs to hold the version of Python used which is needed for the Heroku server 
-Gunicorn 'Green Unicorn' is a Python WSGI production grade HTTP Server for UNIX
-A ProcFile is used for Heroku deployment with web: gunicorn app:server 
+A runtime.txt file needs to hold the version of Python used which is needed for the Heroku server. 
+Gunicorn 'Green Unicorn' is a Python WSGI production grade HTTP Server for UNIX this is reference in the Procfile. The Procfile to be 
+created in the Explorer window needs to start with a capital letter. 
+Within the ProcFile used for Heroku deployment type web: gunicorn app:server  
+Note the space between web and gunicorn is intentional
 A requirements.txt file is created with pip freeze > requirements.txt
 
 To run in local host type in the name in the file of the file preceded by python or py version beforehand e.g. 
@@ -118,3 +129,9 @@ Upload to Github Repository and then follow the steps on Heroku to connect this 
 - Runtimes supported by Heroku https://devcenter.heroku.com/articles/python-runtimes
 
 - Dash core components https://dash.plotly.com/dash-core-components
+
+- Dash Bootstrap with a test app code https://dash-bootstrap-components.opensource.faculty.ai/docs/quickstart/
+
+- Whitenoise required for styling to be transferred from static file for Heroku http://whitenoise.evans.io/en/stable/
+
+- Markers types for Plotly https://plotly.com/python/line-charts/

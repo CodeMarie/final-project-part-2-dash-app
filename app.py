@@ -1,10 +1,11 @@
 # imports
-# from msilib.schema import Component
 import dash
 from dash import dcc, html 
 from dash.dependencies import Input, Output, State 
 import pandas as pd
 import plotly_express as px
+import dash_bootstrap_components as dbc
+
 
 # csv imports for Brief 1 
 product_region = pd.read_csv('csvs_clean/brief_1_quantity_per_product_per_region.csv', index_col=[0])
@@ -18,15 +19,13 @@ sales_hour_df = pd.read_csv('csvs_clean/brief_3_hour_sales_branches.csv', index_
 
 #Csv for Brief 4 
 profitability_per_branch_df = pd.read_csv('csvs_clean/brief_4_profitability_per_branch.csv', index_col=[0])
-
-
+ 
 # variables from csv data to save for region and branch list 
 grouped_region_list = prod_cat_region['region'].drop_duplicates().tolist()
 grouped_branches = profitability_per_branch_df['branch_name'].drop_duplicates().tolist()
 
-
 # setup
-app =  dash.Dash(__name__, title='Dashboard Retail Information')
+app =  dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP], title='Dashboard Retail Information' )
 server = app.server
 
 df1 = pd.read_csv('csvs_clean/brief_1_quantity_per_product_per_region.csv')
@@ -34,9 +33,21 @@ df1 = pd.read_csv('csvs_clean/brief_1_quantity_per_product_per_region.csv')
 app.layout = html.Div([
     html.H1('Retail Regional Dashboard'),
     html.Br(),
-    html.Br(),
+    html.Br(),# Layout for Brief 1
     html.H2('The Best or Worst Product and Product Categories'),
     html.Br(),
+    html.Div(
+    [
+        dbc.Alert(
+            [
+                html.I(className='bi bi-info-circle-fill me-2'),
+                'Use the Dropdown Menus to make a selection then click the Show Graph button to see the data',
+            ],
+            color='info',
+            className='d-flex align-items-center',
+        ),
+    ],
+    ),
     dcc.Dropdown(
         placeholder ='Select the Best or Worst results',
         options=[{'label': 'Top', 'value': 'top'},
@@ -55,16 +66,34 @@ app.layout = html.Div([
         id='region-dropdown',
         ),
     html.Br(),
-    html.Br(),
-    html.Button('Click to Show Graph', id='plot-graph-btn', n_clicks=0),
+    html.Div(
+    [
+        dbc.Button(
+            'Click to Show Graph', id='plot-graph-btn', className='me-2', n_clicks=0
+        ),
+        html.Span(id='example-output', style={"verticalAlign": "middle"}),
+    ]
+    ),
     html.Br(),
     html.Br(),
     html.Div([
     dcc.Graph(id='region-best-worst-products', figure={})]),
     html.Br(), 
-    html.Br(),
+    html.Br(), # Layout for Brief 2
     html.H2('The Best or Worst Performing Branches'),
     html.Br(),
+    html.Div(
+    [
+        dbc.Alert(
+            [
+                html.I(className='bi bi-info-circle-fill me-2'),
+                'Use the Dropdown Menus to make a selection then click the Show Graph button to see the data',
+            ],
+            color='info',
+            className='d-flex align-items-center',
+        ),
+    ],
+    ),
     dcc.Dropdown(
         placeholder ='Select the Best or Worst results',
         options=[{'label': 'Top', 'value': 'top'},
@@ -77,18 +106,34 @@ app.layout = html.Div([
         id='region-performance-dropdown',
         ),
     html.Br(),
-    html.Br(),
-    html.Button('Click to Show Graph', id='plot-graph-btn2', n_clicks=0),
+    html.Div(
+    [
+        dbc.Button(
+            'Click to Show Graph', id="plot-graph-btn2", className="me-2", n_clicks=0
+        ),
+        html.Span(id="example-output2", style={"verticalAlign": "middle"}),
+    ]
+    ),
     html.Br(),
     html.Br(),
     html.Div([
     dcc.Graph(id='region-best-worst-performance', figure={})]),
     html.Br(),
-    html.Br(),
-
     html.Br(), # Layout for Brief 3 
-    html.Br(),
     html.H2('The Hourly Sales Data for the Top Ten Performing Branches'),
+    html.Br(),
+        html.Div(
+    [
+        dbc.Alert(
+            [
+                html.I(className='bi bi-info-circle-fill me-2'),
+                'Use the Dropdown Menus to make a selection then click the Show Graph button to see the data',
+            ],
+            color='info',
+            className='d-flex align-items-center',
+        ),
+    ],
+    ),
     dcc.Dropdown(
         placeholder ='Select a Region',
         options=[{'label': i, 'value': i} for i in grouped_region_list],
@@ -129,15 +174,34 @@ app.layout = html.Div([
         id='month-sales-dd',
         ),
     html.Br(),
+     html.Div(
+    [
+        dbc.Button(
+            'Click to Show Graph', id="plot-graph-btn3", className="me-2", n_clicks=0
+        ),
+        html.Span(id="example-output3", style={"verticalAlign": "middle"}),
+    ]
+    ),
+    html.Br(),
     html.Br(),
     html.Div([
-    html.Br(),
-    html.Button('Click to Show Graph', id='plot-graph-btn3', n_clicks=0),
     dcc.Graph(id='sales-hour-performance', figure={})]),
     html.Br(),
+    html.Br(), # Layout for Brief 4
+    html.H2('Profitability for the Ten Best or Worst Performing Branches'),
     html.Br(),
-    html.Br(),
-    html.H2('Profitability for the Best or Worst Performing Branches'),
+            html.Div(
+    [
+        dbc.Alert(
+            [
+                html.I(className='bi bi-info-circle-fill me-2'),
+                'Use the Dropdown Menu to make a selection then click the Show Graph button to see the data',
+            ],
+            color='info',
+            className='d-flex align-items-center',
+        ),
+    ],
+    ),
     dcc.Dropdown(
         placeholder ='Select the Best or Worst results',
         options=[{'label': 'Top', 'value': 'top'},
@@ -145,8 +209,15 @@ app.layout = html.Div([
         id='top-bot-profitability-dd',
         ),
     html.Br(),
+    html.Div(
+    [
+        dbc.Button(
+            'Click to Show Graph', id="plot-graph-btn4", className="me-2", n_clicks=0
+        ),
+        html.Span(id="example-output4", style={"verticalAlign": "middle"}),
+    ]
+    ),
     html.Br(),
-    html.Button('Click to Show Graph', id='plot-graph-btn4', n_clicks=0),
     html.Br(),
     html.Div([
     dcc.Graph(id='best-worst-profitability', figure={})]),
@@ -231,7 +302,7 @@ def sales_graph( button_click, selected_region, year_dd, month_dd):
             # third iteration 
             sales_df_filtered_by_month = sales_df_filtered_by_year[sales_df_filtered_by_year['month'] == month_dd].sort_values(by ='hour')
             
-            figure = px.line(sales_df_filtered_by_month, x='hour', y='amount_in_gbp', color='branch_name', title=f'The Regional Top Ten - Hourly Sales for Branches within the Region of {selected_region}', hover_data=['amount_in_gbp'] )
+            figure = px.line(sales_df_filtered_by_month, x='hour', y='amount_in_gbp', color='branch_name', title=f'The Regional Top Ten - Hourly Sales for Branches within the Region of {selected_region}', hover_data=['amount_in_gbp'], markers=True )
             return figure 
     else:
         return {}
@@ -250,8 +321,7 @@ def profitability_graph(button_click, top_bot):
             figure = px.pie(branch_profit, values='profitability', names='branch_name', title=f'The Ten Most Profitable Branches', hover_data=['profitability'] )
             return figure 
         else: 
-            branch_profit = profitability_per_branch_df.tail(10) 
-            branch_profit.dropna(axis=0, how='any', inplace=True)          
+            branch_profit = profitability_per_branch_df.tail(10)          
             figure = px.pie(branch_profit, values='profitability', names='branch_name', title=f'The Ten Least Profitable Branches', hover_data=['profitability'] )
             return figure     
     else:
