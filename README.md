@@ -92,7 +92,7 @@ As the description of of the need for performance as an indicator (sales multipl
 
 ## Development Diary 
 
-- For styling there is the option of Dash Bootstrap Components which can be installed with pip install dash-bootstrap-components to be imported
+- For styling there is the option of Dash Bootstrap Components which can be installed with pip install dash-bootstrap-components to be imported and reference to both dbc.themes.BOOTSTRAP and dbc.icons.BOOTSTRAP for a small icon used in the user advisory. 
 
 - Pandas was imported within app.py which holds the Dash application and data.ipybn which holds the testing of files and organisation of cleansed csv files. 
 
