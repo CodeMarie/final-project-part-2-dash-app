@@ -100,7 +100,11 @@ The first three brief points for the Dash Application reference Region data, the
 
 Deployment took place with Heroku. 
 
-Note that whitenoise needs to be in place to carry through the CSS styling for the deployment server. 
+Note that whitenoise needs to be in place to carry through the CSS styling for the deployment server. The following needs to be added to the app.py 
+from whitenoise import WhiteNoise
+server = app.server
+server.wsgi_app = WhiteNoise(server.wsgi_app, root=‘static/’)
+Additionally the static css files need to be added to a 'static' root folder 
 
 To add a different preferred style of marker on the line graph using Plotly explore the link in references below.
 
