@@ -77,9 +77,8 @@ from dash.dependencies import Input, Output, State
 from dash import dcc, html 
 import pandas as pd
 import plotly_express as px 
+from whitenoise import WhiteNoise
 ```
-
-BOOTSTRAP 
 
 ## Data Files 
 Please refer to Dash-Project Part-One which informs further about the data cleansing of the original raw data. 
@@ -89,6 +88,8 @@ Note the brief informs of city information which is not available, as county inf
 
 Note that there are not always ten branches in each region which means the difference in top and bottom ten results for performance does not result in any difference in the data shown. 
 As the description of of the need for performance as an indicator (sales multiplied by quantity) had some ambiguity in its use of a business indicator as the amount_of_gbp is and can be typically used as an indicator in itself, a hover_data was provided to also show the sales and amount_in_gbp separately.  
+
+The fourth brief requested that the profitability for each branch be shown, upon hover, the figures were shown for each portion of the pie chart to keep the clean visual appearance.
 
 ## Development Diary 
 
