@@ -9,6 +9,10 @@ H1 {
     text-shadow: 1px 1px 1px #012756;
 }   
 
+H2 {
+    text-shadow: 1px 1px 1px #012756;
+}
+
     
 .flex-display {
     display: flex;

@@ -82,7 +82,7 @@ from whitenoise import WhiteNoise
 
 ## Data Files 
 Please refer to Dash-Project Part-One which informs further about the data cleansing of the original raw data. 
-The files imported from this process are csv files utilised by the Dashboard Application. 
+The files imported from this process are csv files utilised by the Dashboard Application. The can be found within the csv_clean folder 
 
 Note the brief informs of city information which is not available, as county information was, this was looked at in raw data however, as county is part of region, this was duplicating and excessive to the user in the graphs in creation of the dash app e.g. for Brief 1 there is already a graph for Top Product for Region Bottom Product for Region and Top Product Category for Region and Top Product Category for Region let alone duplicate these 4 to provide 8 graphs for one Brief question. As County forms part of the Region this was illustrated for top and bottom figures with the raw data for County still available. 
 
@@ -93,7 +93,11 @@ The fourth brief requested that the profitability for each branch be shown, upon
 
 ## Development Diary 
 
-- For styling there is the option of Dash Bootstrap Components which can be installed with pip install dash-bootstrap-components to be imported and reference to both dbc.themes.    BOOTSTRAP and dbc.icons.BOOTSTRAP for a small icon used in the user advisory. 
+Miro was used for design of the dashboard and UI planning. This board can be found [here](https://miro.com/app/board/uXjVOIvO7t4=/)
+
+A presentation to coincide with the project was also created [here](https://docs.google.com/presentation/d/1di0Nsz9A2a5k45QYQKChOYg0SwBH8ulKRLFLc348jQI/edit?usp=sharing) 
+
+- For styling there is the option of Dash Bootstrap Components which can be installed with pip install dash-bootstrap-components to be imported and reference to both dbc.themes.    BOOTSTRAP and dbc.icons.BOOTSTRAP for a small icon was used as a visual for user advisory. 
 
 - Pandas was imported within app.py which holds the Dash application and data.ipybn which holds the testing of files and organisation of cleansed csv files. 
 
@@ -128,6 +132,10 @@ Deployment used a Heroku account. Be aware if within EU, for GDPR select an appl
 Ensure there is a .gitignore file in place which contains any large files and .env/
 Upload to Github Repository and then follow the steps on Heroku to connect this repository, i.e. link Github repo and deploy and run app after build is complete. If any errors occur view logs for further insight. 
 
+Whitenoise was required for styling to be transferred from static file for Heroku http://whitenoise.evans.io/en/stable/ As the documentation fix did not work for this project and the nearest solution was provided a a community plotly suggestion, I have created a blog page which provides the steps used to implement static css styling to Heroku which can be deployed with Bootstrap. The link for this blog is here https://medium.com/@m.lyonswake/deploying-your-dash-application-with-heroku-4727ea0cfb54
+
+- The deployed Application can be found at this link (https://dash-retail-project.herokuapp.com/)
+
 
 # References 
 
@@ -139,7 +147,8 @@ Upload to Github Repository and then follow the steps on Heroku to connect this 
 
 - Dash Bootstrap with a test app code https://dash-bootstrap-components.opensource.faculty.ai/docs/quickstart/
 
-- Whitenoise required for styling to be transferred from static file for Heroku http://whitenoise.evans.io/en/stable/
-- The community page within Plotly provided the exact whitenoise statement which worked for this project. The only difference was the replacement of static folder with an asset     folder. The link for that page is here https://community.plotly.com/t/deploying-your-dash-app-to-heroku-the-magical-guide/46723
+- The community page within Plotly provided additional information of use as the documentation for whitenoise did not work for this project at the time of deployment. The link for that page is here https://community.plotly.com/t/deploying-your-dash-app-to-heroku-the-magical-guide/46723
+
+- To add to these instructions the blog for whitenoise I created is here https://medium.com/@m.lyonswake/deploying-your-dash-application-with-heroku-4727ea0cfb54
 
 - Markers types for Plotly https://plotly.com/python/line-charts/

@@ -8,7 +8,7 @@ import dash_bootstrap_components as dbc
 from whitenoise import WhiteNoise
 
 
-# csv imports for Brief 1 
+#Csv imports for Brief 1 
 product_region = pd.read_csv('csvs_clean/brief_1_quantity_per_product_per_region.csv', index_col=[0])
 prod_cat_region = pd.read_csv('csvs_clean/brief_1_quant_per_prod_cat_per_region.csv', index_col=[0])
 
@@ -25,12 +25,10 @@ profitability_per_branch_df = pd.read_csv('csvs_clean/brief_4_profitability_per_
 grouped_region_list = prod_cat_region['region'].drop_duplicates().tolist()
 grouped_branches = profitability_per_branch_df['branch_name'].drop_duplicates().tolist()
 
-# setup
+#Setup
 app =  dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP], title='Dashboard Retail Information' )
 server = app.server
 server.wsgi_app = WhiteNoise(server.wsgi_app, root='assets/')
-
-df1 = pd.read_csv('csvs_clean/brief_1_quantity_per_product_per_region.csv')
 
 app.layout = html.Div([
     html.H1('Retail Regional Dashboard'),
@@ -224,7 +222,7 @@ app.layout = html.Div([
     html.Div([
     dcc.Graph(id='best-worst-profitability', figure={})]),
     html.Br()
-    ])
+])
 
 
 # Callback for Brief 1 to display top or bottom results either Products or Product Category for the selected region from dropdown and plot graph on button click 
